@@ -8,6 +8,11 @@ import (
 )
 
 func main() {
+	if len(os.Args) <= 1 {
+		fmt.Println("No arguments given")
+		os.Exit(1)
+	}
+
 	var regs syscall.PtraceRegs
 	var ss syscallCounter
 
