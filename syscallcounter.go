@@ -41,3 +41,8 @@ func (s syscallCounter) getName(syscallID uint64) string {
 	name, _ := sec.ScmpSyscall(syscallID).GetName()
 	return name
 }
+
+func (s syscallCounter) getOther(syscallID uint64) string {
+	name, _ := sec.ScmpSyscall(syscallID).GetName()
+	return name
+}

@@ -48,8 +48,8 @@ func main() {
 			}
 
 			// Uncomment to show each syscall as it's called
-			// name := ss.getName(regs.Orig_rax)
-			// fmt.Printf("%s\n", name)
+			name := ss.getName(regs.Orig_rax)
+			fmt.Printf("%s\n", name)
 			ss.inc(regs.Orig_rax)
 		}
 
